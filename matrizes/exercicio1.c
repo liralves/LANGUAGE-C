@@ -1,3 +1,5 @@
+//Encontrar impares em uma matriz
+
 #include <stdio.h>
 #define n 2
 int oddNumbers(int m[][n]);
