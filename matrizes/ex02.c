@@ -4,10 +4,11 @@
 void searchNumber(int[lin][col], int, int, int);
 void ordemMatrix(int*, int*);
 void fillMatrix(int[lin][col], int*, int*);
+int sumMatrix(int[lin][col], int, int);
 
 int main(){
 
-    int matrix[lin][col], l = 0, c = 0, k = 0;
+    int matrix[lin][col], l = 0, c = 0, k = 0, sum = 0;
 
     ordemMatrix(&l, &c);
     fillMatrix(matrix, &l, &c);
@@ -16,6 +17,9 @@ int main(){
     scanf("%d", &k);
 
     searchNumber(matrix, l, c, k);
+
+    sum = sumMatrix(matrix, l, c);
+    printf("O somatório de todos os elementos da matriz é: %d\n", sum);
 
 
 }
@@ -47,4 +51,16 @@ void fillMatrix(int matrix[lin][col], int *l, int *c){
             scanf("%d", &matrix[i][j]);
         }
     }
+}
+
+int sumMatrix(int matrix[lin][col], int l, int c) {
+    int soma = 0;
+
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; j++) {
+            soma += matrix[i][j];
+        }
+    }
+
+    return soma;
 }
