@@ -1,8 +1,12 @@
+//APRENDIZ: LUANA LARISSA DE LIRA ALVES (INDIVIDUAL)
+//RA: 00000851066
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #define M 6
 #define N 6
+
 
 void fillMatrix(int m[M][N], int l, int c);
 void printMatrix(int m[M][N], int l, int c);
