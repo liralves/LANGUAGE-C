@@ -4,8 +4,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-#define M 6
-#define N 6
+#define M 30
+#define N 20
 
 
 void fillMatrix(int m[M][N], int l, int c);
@@ -16,7 +16,7 @@ int repeatNumbers(int m[M][N], int l, int c, int *linha, int *coluna);
  
 int main() {
     int matrix[M][N], vector[N];
-    int option, linha, coluna;
+    int option, linha, coluna, a;
  
     do {
         printf("\n1 - Preencher matriz.\n");
@@ -37,7 +37,7 @@ int main() {
                 break;
  
             case 3:
-                int a = repeatNumbers(matrix, M, N, &linha, &coluna);
+                a = repeatNumbers(matrix, M, N, &linha, &coluna);
                 if (linha > coluna)
                     printf("Linha com mais repetidos: %d\nNúmero de repetições: %d\n", linha, a);
                 else
@@ -52,7 +52,7 @@ int main() {
 void fillMatrix(int m[M][N], int l, int c) {
     for (int i = 0; i < l; ++i) {
         for (int j = 0; j < c; ++j) {
-            m[i][j] = rand() % 30 + 1;
+            m[i][j] = rand() % 100 + 1;
         }
     }
 }
